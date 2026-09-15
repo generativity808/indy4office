@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inderprit “Indy” Sekhon for East Bay Regional Park District · Ward 7</title>
+  <meta name="description"
+    content="Inderprit “Indy” Sekhon is running for East Bay Regional Park District, Ward 7. Healthy land. Healthy people. Public money that works." />
+  <meta name="theme-color" content="#0649b7" />
+  <style>
+    :root {
+      --blue: #0649b7;
+      --blue-dark: #082e71;
+      --yellow: #ffc928;
+      --orange: #ef542e;
+      --cream: #f8f2df;
+      --ink: #082956;
+      --green: #4f8b67;
+      --sky: #8ac8ee;
+      --white: #fffdf8;
+      --max: 1180px;
+      --radius: 24px;
+      --shadow: 0 18px 50px rgba(0, 32, 88, .16);
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55
+    }
+
+    a {
+      color: inherit
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    .wrap {
+      width: min(calc(100% - 32px), var(--max));
+      margin: auto
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(6, 73, 183, .96);
+      backdrop-filter: blur(12px);
+      color: white;
+      border-bottom: 1px solid rgba(255, 255, 255, .15)
+    }
+
+    .nav {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px
+    }
+
+    .brand {
+      font-family: Georgia, serif;
+      font-weight: 800;
+      font-size: 1.4rem;
+      letter-spacing: -.03em;
+      text-decoration: none
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+      font-size: .92rem;
+      font-weight: 700
+    }
+
+    .navlinks a {
+      text-decoration: none;
+      opacity: .92
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 2px solid transparent;
+      transition: .2s transform, .2s box-shadow
+    }
+
+    .pill:hover {
+      transform: translateY(-1px)
+    }
+
+    .pill.yellow {
+      background: var(--yellow);
+      color: var(--ink);
+      box-shadow: 0 8px 0 rgba(3, 40, 100, .18)
+    }
+
+    .pill.orange {
+      background: var(--orange);
+      color: white
+    }
+
+    .pill.ghost {
+      border-color: currentColor
+    }
+
+    .menu {
+      display: none;
+      background: none;
+      border: 0;
+      color: white;
+      font-size: 1.8rem
+    }
+
+    .hero {
+      background: var(--blue);
+      color: white;
+      position: relative;
+      overflow: hidden;
+      padding: 68px 0 54px
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 170px;
+      background: linear-gradient(165deg, transparent 0 45%, rgba(0, 38, 105, .35) 45% 100%);
+      pointer-events: none
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.06fr .94fr;
+      gap: 46px;
+      align-items: center;
+      position: relative;
+      z-index: 2
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .79rem;
+      font-weight: 900;
+      color: var(--yellow);
+      margin-bottom: 16px
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: .98;
+      letter-spacing: -.045em;
+      margin: 0
+    }
+
+    h1 {
+      font-size: clamp(3.3rem, 7vw, 7rem)
+    }
+
+    .hero .dek {
+      font-family: Georgia, serif;
+      font-size: clamp(1.2rem, 2vw, 1.65rem);
+      max-width: 680px;
+      margin: 24px 0 10px
+    }
+
+    .hero .spine {
+      font-weight: 800;
+      font-size: 1rem;
+      margin: 0 0 30px;
+      color: #e9f3ff
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px
+    }
+
+    .donut {
+      filter: drop-shadow(0 26px 28px rgba(0, 28, 83, .32));
+      transform: rotate(-2deg)
+    }
+
+    .legal-name {
+      margin-top: 22px;
+      font-size: .84rem;
+      opacity: .78
+    }
+
+    section {
+      padding: 78px 0
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 36px;
+      align-items: end;
+      margin-bottom: 34px
+    }
+
+    .kicker {
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: .78rem;
+      font-weight: 900;
+      color: var(--blue)
+    }
+
+    h2 {
+      font-size: clamp(2.5rem, 5vw, 4.9rem)
+    }
+
+    .intro {
+      font-size: 1.18rem;
+      max-width: 720px;
+      margin: 0
+    }
+
+    .cards3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px;
+      border: 2px solid rgba(8, 46, 113, .08);
+      box-shadow: var(--shadow)
+    }
+
+    .card .num {
+      font-size: .82rem;
+      letter-spacing: .14em;
+      font-weight: 900;
+      color: var(--orange)
+    }
+
+    .card h3 {
+      font-size: 2rem;
+      margin: 8px 0 14px
+    }
+
+    .card p {
+      margin: 0 0 18px
+    }
+
+    .card ul {
+      padding-left: 1.15rem;
+      margin-bottom: 0
+    }
+
+    .protect {
+      border-top: 10px solid var(--orange)
+    }
+
+    .connect {
+      border-top: 10px solid var(--yellow)
+    }
+
+    .deliver {
+      border-top: 10px solid var(--blue)
+    }
+
+    .vision {
+      background: var(--blue-dark);
+      color: white
+    }
+
+    .vision .kicker {
+      color: var(--yellow)
+    }
+
+    .vision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 34px
+    }
+
+    .vision-panel {
+      border-radius: var(--radius);
+      padding: 30px;
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .15)
+    }
+
+    .vision-panel h3 {
+      font-size: 2.25rem;
+      color: var(--yellow);
+      margin-bottom: 18px
+    }
+
+    .taggrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px
+    }
+
+    .tag {
+      background: rgba(255, 255, 255, .08);
+      border-radius: 16px;
+      padding: 16px
+    }
+
+    .tag b {
+      display: block;
+      color: white;
+      margin-bottom: 4px
+    }
+
+    .theory {
+      margin-top: 26px;
+      padding: 26px;
+      border-left: 7px solid var(--yellow);
+      background: rgba(255, 255, 255, .07);
+      font-family: Georgia, serif;
+      font-size: 1.25rem
+    }
+
+    .stories {
+      background: #fffaf0
+    }
+
+    .storygrid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px
+    }
+
+    .story {
+      padding: 25px;
+      border-radius: 20px;
+      background: white;
+      border: 1px solid #eadfc8
+    }
+
+    .story h3 {
+      font-size: 1.6rem;
+      margin-bottom: 9px
+    }
+
+    .story .arrow {
+      font-weight: 900;
+      color: var(--orange)
+    }
+
+    .accountability {
+      background: var(--yellow)
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 28px
+    }
+
+    .metric {
+      background: #fff7d6;
+      border-radius: 18px;
+      padding: 20px;
+      font-weight: 800;
+      min-height: 100px;
+      display: flex;
+      align-items: flex-end
+    }
+
+    .note {
+      font-size: .88rem;
+      opacity: .78;
+      margin-top: 20px;
+      max-width: 850px
+    }
+
+    .indy {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 40px;
+      align-items: start
+    }
+
+    .portrait-placeholder {
+      aspect-ratio: 4/5;
+      border-radius: var(--radius);
+      background: linear-gradient(150deg, var(--blue), var(--blue-dark));
+      display: flex;
+      align-items: end;
+      padding: 24px;
+      color: white;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      padding:0;
+    }
+
+    .portrait-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .bio h2 {
+      margin-bottom: 22px
+    }
+
+    .bio p {
+      font-size: 1.08rem
+    }
+
+    .heart {
+      background: var(--orange);
+      color: white
+    }
+
+    .heart .kicker {
+      color: #ffe969
+    }
+
+    .heart-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center
+    }
+
+    .steps {
+      display: grid;
+      gap: 10px
+    }
+
+    .step {
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .12);
+      font-weight: 800
+    }
+
+    .heart-donate {
+      grid-column: 1 / -1;
+      justify-content: center;
+      margin-top: 14px
+    }
+
+    .heart-donate .pill {
+      padding: 16px 28px;
+      font-size: 1.05rem
+    }
+
+    .faq {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 36px
+    }
+
+    details {
+      background: white;
+      border-radius: 16px;
+      margin-bottom: 10px;
+      padding: 16px 18px;
+      border: 1px solid #e8decc
+    }
+
+    summary {
+      font-weight: 850;
+      cursor: pointer
+    }
+
+    .cta {
+      background: var(--blue);
+      color: white;
+      text-align: center;
+      padding: 70px 0
+    }
+
+    .cta h2 {
+      max-width: 850px;
+      margin: 0 auto 22px
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 28px;
+      font-size: 1.12rem
+    }
+
+    footer {
+      background: #06295e;
+      color: white;
+      padding: 30px 0 36px;
+      font-size: .9rem
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: end
+    }
+
+    .footer-brand {
+      font-family: Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 800
+    }
+
+    .disclaimer {
+      opacity: .72;
+      font-size: .78rem;
+      margin-top: 12px;
+      max-width: 650px
+    }
+
+    .footer-links {
+      text-align: right
+    }
+
+    @media (max-width:900px) {
+      .navlinks {
+        display: none
+      }
+
+      .menu {
+        display: block
+      }
+
+      .hero-grid,
+      .section-head,
+      .indy,
+      .heart-box,
+      .faq {
+        grid-template-columns: 1fr
+      }
+
+      .hero {
+        padding-top: 44px
+      }
+
+      .donut {
+        width: min(520px, 92%);
+        margin: auto
+      }
+
+      .cards3 {
+        grid-template-columns: 1fr
+      }
+
+      .vision-grid {
+        grid-template-columns: 1fr
+      }
+
+      .metrics {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .storygrid {
+        grid-template-columns: 1fr
+      }
+
+      .section-head {
+        gap: 16px
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr
+      }
+
+      .footer-links {
+        text-align: left
+      }
+    }
+
+    @media (max-width:560px) {
+      .wrap {
+        width: min(calc(100% - 22px), var(--max))
+      }
+
+      .nav {
+        height: 62px
+      }
+
+      .brand {
+        font-size: 1.08rem
+      }
+
+      .hero {
+        padding: 34px 0 36px
+      }
+
+      h1 {
+        font-size: 3.5rem
+      }
+
+      section {
+        padding: 58px 0
+      }
+
+      .card {
+        padding: 22px
+      }
+
+      .taggrid,
+      .metrics {
+        grid-template-columns: 1fr
+      }
+
+      .actions .pill {
+        width: 100%
+      }
+
+      .portrait-placeholder {
+        aspect-ratio: 16/10
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#top">Indy Sekhon · Ward 7</a>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="#platform">Platform</a><a href="#vision">2036 Vision</a><a href="#indy">Meet Indy</a><a
+          href="#heartstorming">Heartstorming</a>
+        <a class="pill yellow" href="#join">Get involved</a>
+      </nav>
+      <button class="menu" aria-label="Open menu"
+        onclick="document.getElementById('mobileMenu').hidden=!document.getElementById('mobileMenu').hidden">☰</button>
+    </div>
+    <div id="mobileMenu" hidden style="padding:0 16px 16px">
+      <div style="display:grid;gap:8px;color:white;font-weight:800">
+        <a href="#platform">Platform</a><a href="#vision">2036 Vision</a><a href="#indy">Meet Indy</a><a
+          href="#heartstorming">Heartstorming</a><a href="#join">Get involved</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Candidate for East Bay Regional Park District · Ward 7</div>
+          <h1>Living Parks.<br />Thriving Communities.</h1>
+          <p class="dek">Indy is running to help define the Park District’s next chapter: protecting the land,
+            connecting more people to the health and belonging parks provide, and making public systems deliver.</p>
+          <p class="spine">Healthy land. Healthy people. Public money that works.</p>
+          <div class="actions"><a class="pill yellow" href="#platform">See the plan</a><a class="pill ghost"
+              href="#join">Join the campaign</a></div>
+          <div class="legal-name">Inderprit “Indy” Sekhon · 2026 candidate for EBRPD Ward 7</div>
+        </div>
+        <div><img class="donut" src="doughnut.png"
+            alt="Illustrated Doughnut Vision landscape showing water, wetlands, farms, neighborhoods, transit, bridge and hills." />
+        </div>
+      </div>
+    </section>
+
+    <section id="platform">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">The public platform</div>
+            <h2>Protect.<br />Connect.<br />Deliver.</h2>
+          </div>
+          <p class="intro">The District has spent generations protecting land. Indy’s campaign asks how that protected
+            land can more fully sustain the people and communities around it.</p>
+        </div>
+        <div class="cards3">
+          <article class="card protect">
+            <div class="num">01 · PROTECT</div>
+            <h3>Care for the land before the emergency.</h3>
+            <p>Keep land, water, roads, trails and fire-prone landscapes healthy and safe — with maintenance and
+              ecological stewardship matched to the places the District manages.</p>
+            <ul>
+              <li>Wildfire resilience</li>
+              <li>Wetlands and shorelines</li>
+              <li>Healthy soil and habitat</li>
+            </ul>
+          </article>
+          <article class="card connect">
+            <div class="num">02 · CONNECT</div>
+            <h3>Make parks work for more people.</h3>
+            <p>Treat parks as public-health and belonging infrastructure, with better access, locally relevant
+              programming and meaningful ways for residents to participate.</p>
+            <ul>
+              <li>Health and wellbeing</li>
+              <li>Transit and first-visit access</li>
+              <li>Youth and paid stewardship</li>
+            </ul>
+          </article>
+          <article class="card deliver">
+            <div class="num">03 · DELIVER</div>
+            <h3>Make public money produce visible results.</h3>
+            <p>Modernize field systems, publish priorities and costs, and make it easier to see what is being fixed,
+              restored and improved.</p>
+            <ul>
+              <li>Transparent priorities</li>
+              <li>Modern field tools</li>
+              <li>Measurable outcomes</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="vision" id="vision">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Doughnut Vision 2036</div>
+            <h2>A safe and thriving place for people and planet.</h2>
+          </div>
+          <p class="intro">Doughnut Economics asks how we meet more human needs without damaging the living systems we
+            depend on. Indy’s 2036 vision applies that question to Ward 7’s parks and communities.</p>
+        </div>
+        <div class="vision-grid">
+          <div class="vision-panel">
+            <h3>People thrive</h3>
+            <div class="taggrid">
+              <div class="tag"><b>Health</b>Parks that support movement, stress reduction and connection.</div>
+              <div class="tag"><b>Food</b>Explore edible landscapes and community stewardship where appropriate.</div>
+              <div class="tag"><b>Youth</b>Paid pathways into restoration, stewardship and civic work.</div>
+              <div class="tag"><b>Access</b>Make it easier for more communities to reach and use parks.</div>
+            </div>
+          </div>
+          <div class="vision-panel">
+            <h3>Nature thrives</h3>
+            <div class="taggrid">
+              <div class="tag"><b>Fire resilience</b>Proactive vegetation and ecological management.</div>
+              <div class="tag"><b>Shorelines</b>Wetlands and living systems that improve habitat and absorb flooding.
+              </div>
+              <div class="tag"><b>Biodiversity</b>Native plant, pollinator and wildlife corridors.</div>
+              <div class="tag"><b>Circular systems</b>Turn organic material back into useful ecological value.</div>
+            </div>
+          </div>
+        </div>
+        <div class="theory"><strong>The theory of change:</strong> If we invest in parks as infrastructure for both
+          people and planet, healthier land can support healthier communities, healthier communities can become stronger
+          stewards, and accountable public systems can reinforce both.</div>
+      </div>
+    </section>
+
+    <section class="stories">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Ward 7, 2036</div>
+            <h2>See the place. Imagine the next chapter.</h2>
+          </div>
+          <p class="intro">Each story starts with a real place and a real condition, asks what nearby communities need,
+            then connects the future vision to a practical policy, partnership or funding pathway.</p>
+        </div>
+        <div class="storygrid">
+          <article class="story">
+            <h3>The Shoreline We Can Restore</h3>
+            <p>Cleaner water, healthier wetlands and safer access — using proven treatment and restoration approaches
+              where they fit.</p><span class="arrow">Current condition → practical response → healthier shoreline</span>
+          </article>
+          <article class="story">
+            <h3>The Park That Heals</h3>
+            <p>Explore nature-prescription and public-health partnerships that make “parks are health infrastructure”
+              literal.</p><span class="arrow">Nature access → wellbeing → prevention</span>
+          </article>
+          <article class="story">
+            <h3>The Park That Feeds</h3>
+            <p>Explore food forests, edible corridors and community stewardship on appropriate park edges and buffer
+              zones.</p><span class="arrow">Park edge → stewardship → local nourishment</span>
+          </article>
+          <article class="story">
+            <h3>The Park That Creates Work</h3>
+            <p>Create paid stewardship pathways so young people can learn ecological skills while improving the places
+              they use.</p><span class="arrow">Learning → paid work → local stewardship</span>
+          </article>
+          <article class="story">
+            <h3>The Government You Can See</h3>
+            <p>Make priorities, costs, timelines and outcomes easier for residents to understand and follow.</p><span
+              class="arrow">Public data → accountability → trust</span>
+          </article>
+          <article class="story">
+            <h3>The Land We Care for Before Crisis</h3>
+            <p>Shift from reactive emergency response toward proactive vegetation, soil, wetland and habitat management.
+            </p><span class="arrow">Prevention → resilience → regeneration</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="accountability">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Public money that works</div>
+            <h2>You should be able to see what your Park District is doing.</h2>
+          </div>
+          <p class="intro">The argument is not that every public dollar is discretionary. It is that a large public
+            institution should make its priorities, costs and results understandable.</p>
+        </div>
+        <div class="metrics">
+          <div class="metric">Maintenance response & repair times</div>
+          <div class="metric">Trail & facility condition over time</div>
+          <div class="metric">Wildfire hazards treated & acres restored</div>
+          <div class="metric">Water quality & ecological outcomes</div>
+          <div class="metric">Residents reached</div>
+          <div class="metric">Local organizations contracted</div>
+          <div class="metric">Ward 7 investment</div>
+          <div class="metric">Project costs, owners & timelines</div>
+        </div>
+        <p class="note">Specific budget figures remain subject to reconciliation against the District’s adopted budget
+          before publication. The campaign’s standard should be simple: verified facts are labeled as facts; proposals
+          are labeled as proposals; future concepts are labeled as future concepts.</p>
+      </div>
+    </section>
+
+    <section id="indy">
+      <div class="wrap indy">
+        <div class="portrait-placeholder"><img src="indy-laughing.gif" alt="Indy Sekhon laughing"></div>
+        <div class="bio">
+          <div class="kicker">Meet Indy</div>
+          <h2>Parks can do more.</h2>
+          <p>Indy is a regenerative farmer, community organizer and systems thinker running for the East Bay Regional
+            Park District Board in Ward 7.</p>
+          <p>His work focuses on the relationship between personal health, community wellbeing and the health of the
+            land. He is running because he believes the Park District can build on its legacy of land protection and
+            become a more active partner in public health, climate resilience, ecological restoration and community
+            stewardship.</p>
+          <p><strong>His question is straightforward:</strong> How can the land we have already protected do more good
+            for the people and places around it?</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="heart" id="heartstorming">
+      <div class="wrap heart-box">
+        <div>
+          <div class="kicker">Heartstorming Ward 7</div>
+          <h2>Listening that leads somewhere.</h2>
+          <p class="intro">Most public engagement begins with a survey. Heartstorming begins with a place, a
+            conversation and a practical question: <strong>What would help your community thrive here?</strong></p>
+        </div>
+        <div class="steps">
+          <div class="step">1 · Experience the place</div>
+          <div class="step">2 · Share what you see and need</div>
+          <div class="step">3 · Imagine what could change</div>
+          <div class="step">4 · Connect ideas to policy and action</div>
+          <div class="step">5 · Invite people back into the work</div>
+        </div>
+
+        <div class="heart-donate actions">
+          <a class="pill yellow" target="_blank" href="https://buy.stripe.com/14AbJ1foE5G7gCH9whcV200">Donate to the campaign</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap faq">
+        <div>
+          <div class="kicker">Plain-language FAQ</div>
+          <h2>What does this mean?</h2>
+        </div>
+        <div>
+          <details open>
+            <summary>Why call it “Doughnut Vision”?</summary>
+            <p>The doughnut is a simple model: make sure people can thrive while keeping ecological systems healthy. The
+              campaign uses it as a long-horizon method, not as a prerequisite for understanding the platform.</p>
+          </details>
+          <details>
+            <summary>Is every 2036 idea already an official Park District program?</summary>
+            <p>No. The site distinguishes campaign proposals and future concepts from existing District programs.
+              Partnerships are not implied until they are actually established.</p>
+          </details>
+          <details>
+            <summary>What does one Park District director control?</summary>
+            <p>One director does not control the District alone. Indy would need to build public support and Board
+              support for pilots, policies and investments.</p>
+          </details>
+          <details>
+            <summary>Why focus on public systems?</summary>
+            <p>Maintenance, ecological care, field data and capital decisions are connected. Better information and
+              clearer priorities can help staff, the Board and residents understand what needs attention and what
+              progress looks like.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="join">
+      <div class="wrap">
+        <div class="kicker" style="color:var(--yellow)">Join the campaign</div>
+        <h2>Help shape Ward 7’s next decade.</h2>
+        <p>Vote. Volunteer. Share a park story. Come to a Heartstorming event. Help turn a long-horizon vision into
+          practical work.</p>
+        <div class="actions" style="justify-content:center"><a class="pill yellow" target="_blank"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSc652ppcEPhFyMtQTiuM40sYXw9dLmoml_qmxxMss7rlWrHFg/viewform?usp=send_form">Volunteer</a><a
+            class="pill ghost" target="_blank" href="https://pol.is/3atnwrjzcn">Share your park story</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <div class="footer-brand">Inderprit “Indy” Sekhon</div>
+        <div>Candidate for East Bay Regional Park District · Ward 7 · 2026</div>
+        <div class="disclaimer">Website is supported and maintained by Indy Sekhon Doughnut EBRPD 2026.</div>
+      </div>
+      <div class="footer-links"><strong>Healthy land. Healthy people. Public money that works.</strong><br />Protect ·
+        Connect · Deliver.</div>
+    </div>
+  </footer>
+</body>
+
+</html>
