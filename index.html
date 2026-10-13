@@ -435,6 +435,307 @@
       font-size: 1.08rem
     }
 
+    .portrait-col {
+      display: flex;
+      flex-direction: column;
+      gap: 28px
+    }
+
+    .civic {
+      display: grid;
+      gap: 18px
+    }
+
+    .civic-block {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 20px 22px;
+      border: 1px solid #e8decc;
+      box-shadow: 0 10px 28px rgba(0, 32, 88, .06)
+    }
+
+    .civic-block ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: .92rem;
+      line-height: 1.45
+    }
+
+    .civic-block li {
+      position: relative;
+      padding-left: 1.1rem;
+      margin-bottom: .55rem
+    }
+
+    .civic-block li:last-child {
+      margin-bottom: 0
+    }
+
+    .civic-block li:before {
+      content: "+";
+      position: absolute;
+      left: 0;
+      font-weight: 900;
+      color: var(--orange)
+    }
+
+    .civic-block a {
+      color: var(--blue);
+      font-weight: 700
+    }
+
+    .indy-videos {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+      text-align: left
+    }
+
+    .civic-head {
+      margin-top: 36px;
+      margin-bottom: 24px
+    }
+
+    .civic-head h2 {
+      margin-bottom: 0
+    }
+
+    .civic-block-head .kicker {
+      margin-bottom: 8px
+    }
+
+    .civic-block-head h3 {
+      font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+      margin: 0 0 14px;
+      color: var(--ink)
+    }
+
+    .indy-videos .kicker {
+      margin-bottom: 14px
+    }
+
+    .video-thumbs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      width: 100%;
+      align-items: stretch
+    }
+
+    .video-thumb {
+      position: relative;
+      flex: 0 0 calc((100% - 10px) / 2);
+      max-width: calc((100% - 10px) / 2);
+      padding: 0;
+      border: 2px solid rgba(8, 46, 113, .14);
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      background: var(--blue-dark);
+      aspect-ratio: 16/9;
+      transition: transform .2s, box-shadow .2s, border-color .2s
+    }
+
+    .video-thumb:hover,
+    .video-thumb:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 32, 88, .22);
+      border-color: var(--yellow);
+      outline: none
+    }
+
+    .video-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    .video-thumb-play {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      background: rgba(6, 41, 94, .38)
+    }
+
+    .video-thumb-play:before {
+      content: "";
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .92);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .25)
+    }
+
+    .video-thumb-play:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 4px 0 4px 7px;
+      border-color: transparent transparent transparent var(--blue-dark);
+      margin-left: 2px
+    }
+
+    .video-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px
+    }
+
+    .video-modal[hidden] {
+      display: none
+    }
+
+    .video-modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(4, 20, 48, .94);
+      cursor: pointer
+    }
+
+    .video-modal-panel {
+      position: relative;
+      width: min(1120px, 100%);
+      z-index: 1
+    }
+
+    .video-modal-close {
+      position: absolute;
+      top: -44px;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      border: 0;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .15);
+      color: white;
+      font-size: 1.6rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: background .2s
+    }
+
+    .video-modal-close:hover {
+      background: rgba(255, 255, 255, .28)
+    }
+
+    .video-modal-frame {
+      aspect-ratio: 16/9;
+      background: #000;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow)
+    }
+
+    .video-modal-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0
+    }
+
+    .calendar-modal .video-modal-panel {
+      width: min(1180px, 100%);
+      height: min(92vh, 900px);
+      display: flex;
+      flex-direction: column
+    }
+
+    .calendar-modal .video-modal-frame {
+      aspect-ratio: unset;
+      flex: 1;
+      min-height: 0;
+      background: #fff
+    }
+
+    .calendar-modal-note {
+      margin: 12px 0 0;
+      text-align: center;
+      font-size: .88rem
+    }
+
+    .calendar-modal-note a {
+      color: #c8e4ff;
+      font-weight: 700
+    }
+
+    .events-cta-card {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      background: var(--white);
+      border: 3px solid var(--blue);
+      border-radius: var(--radius);
+      padding: 32px 36px;
+      box-shadow: var(--shadow)
+    }
+
+    .events-cta-copy h2 {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      margin: 8px 0 10px
+    }
+
+    .events-cta-copy p {
+      margin: 0;
+      max-width: 520px;
+      font-size: 1.05rem
+    }
+
+    .events-open-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      border: 0;
+      border-radius: 999px;
+      padding: 18px 28px;
+      background: var(--blue);
+      color: white;
+      font: inherit;
+      font-weight: 900;
+      font-size: 1.12rem;
+      cursor: pointer;
+      box-shadow: 0 10px 0 rgba(3, 40, 100, .2);
+      transition: transform .2s, box-shadow .2s
+    }
+
+    .events-open-btn:hover {
+      transform: translateY(-2px)
+    }
+
+    .events-open-btn:focus-visible {
+      outline: 3px solid var(--yellow);
+      outline-offset: 3px
+    }
+
+    .events-open-btn svg {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px
+    }
+
+    .pill.events-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 0;
+      cursor: pointer;
+      font: inherit
+    }
+
+    .pill.events-pill svg {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px
+    }
+
     .heart {
       background: var(--orange);
       color: white
@@ -635,6 +936,20 @@
         width: 100%
       }
 
+      .events-cta-card {
+        padding: 24px
+      }
+
+      .events-open-btn {
+        width: 100%;
+        justify-content: center
+      }
+
+      .video-thumb {
+        flex: 0 0 100%;
+        max-width: 100%
+      }
+
       .portrait-placeholder {
         aspect-ratio: 16/10
       }
@@ -648,7 +963,7 @@
       <a class="brand" href="#top">Indy Sekhon · Ward 7</a>
       <nav class="navlinks" aria-label="Primary">
         <a href="#platform">Platform</a><a href="#vision">2036 Vision</a><a href="#indy">Meet Indy</a><a
-          href="#heartstorming">Heartstorming</a>
+          href="#heartstorming">Heartstorming</a><a href="#events">Events</a>
         <a class="pill yellow" href="#join">Get involved</a>
       </nav>
       <button class="menu" aria-label="Open menu"
@@ -657,7 +972,7 @@
     <div id="mobileMenu" hidden style="padding:0 16px 16px">
       <div style="display:grid;gap:8px;color:white;font-weight:800">
         <a href="#platform">Platform</a><a href="#vision">2036 Vision</a><a href="#indy">Meet Indy</a><a
-          href="#heartstorming">Heartstorming</a><a href="#join">Get involved</a>
+          href="#heartstorming">Heartstorming</a><a href="#events">Events</a><a href="#join">Get involved</a>
       </div>
     </div>
   </header>
@@ -839,7 +1154,34 @@
 
     <section id="indy">
       <div class="wrap indy">
-        <div class="portrait-placeholder"><img src="indy-laughing.gif" alt="Indy Sekhon laughing"></div>
+        <div class="portrait-col">
+          <div class="portrait-placeholder"><img src="indy-laughing.gif" alt="Indy Sekhon laughing"></div>
+          <div class="indy-videos">
+            <div class="kicker">Watch Indy</div>
+            <div class="video-thumbs">
+              <button type="button" class="video-thumb" data-youtube="r-tp38nyZ24" aria-label="Play video 1">
+                <img src="https://img.youtube.com/vi/r-tp38nyZ24/mqdefault.jpg" alt="" width="320" height="180"
+                  loading="lazy" decoding="async" />
+                <span class="video-thumb-play" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="video-thumb" data-youtube="yLk3WDyx-CY" aria-label="Play video 2">
+                <img src="https://img.youtube.com/vi/yLk3WDyx-CY/mqdefault.jpg" alt="" width="320" height="180"
+                  loading="lazy" decoding="async" />
+                <span class="video-thumb-play" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="video-thumb" data-youtube="6g7Wf1MYQhI" aria-label="Play video 3">
+                <img src="https://img.youtube.com/vi/6g7Wf1MYQhI/mqdefault.jpg" alt="" width="320" height="180"
+                  loading="lazy" decoding="async" />
+                <span class="video-thumb-play" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="video-thumb" data-youtube="cakysUVVF8U" aria-label="Play video 4">
+                <img src="https://img.youtube.com/vi/cakysUVVF8U/mqdefault.jpg" alt="" width="320" height="180"
+                  loading="lazy" decoding="async" />
+                <span class="video-thumb-play" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+        </div>
         <div class="bio">
           <div class="kicker">Meet Indy</div>
           <h2>Parks can do more.</h2>
@@ -851,6 +1193,49 @@
             stewardship.</p>
           <p><strong>His question is straightforward:</strong> How can the land we have already protected do more good
             for the people and places around it?</p>
+          <div class="civic-head">
+            <div class="kicker">Record of service</div>
+          </div>
+          <div class="civic">
+            <div class="civic-block">
+              <div class="civic-block-head">
+                <h3>Local Government Civic Engagement</h3>
+              </div>
+              <ul>
+                <li>Board Member with the Contra Costa County Advisory Council on Aging</li>
+                <li>Assistant Director with Contra Costa Resource Conservation District</li>
+                <li>Board Member, Crockett Community Foundation (Dec 2026 start)</li>
+              </ul>
+            </div>
+            <div class="civic-block">
+              <div class="civic-block-head">
+                <h3>Nonprofit Engagement</h3>
+              </div>
+              <ul>
+                <li>Volunteer Executive Director, Cultivating Self, healthcare education &amp; community resilience</li>
+                <li>Board Member, The Interfaith Center</li>
+                <li>Board Member, Rancho Compasion, animal sanctuary and compassion education</li>
+                <li>Advocate, Doughnut Economics Action Lab and California Doughnut Economics Coalition</li>
+                <li>Volunteer, Chapter 510, youth writing &amp; imagination</li>
+                <li>Volunteer, CREEC, Carquinez Regional Environmental Education Center</li>
+              </ul>
+            </div>
+            <div class="civic-block">
+              <div class="civic-block-head">
+                <h3>Labor</h3>
+              </div>
+              <ul>
+                <li>Farmworker, Cloverfield Organic Farm, El Sobrante</li>
+                <li>Homeschooling educator and nature-based education curriculum designer, <a
+                    href="https://karkincommons.com/indy" target="_blank" rel="noopener noreferrer">Karkin
+                    Commons</a></li>
+                <li>Regenerative landscaping and permaculture disaster resilience, <a
+                    href="https://www.cosmiclabyrinth.world/" target="_blank" rel="noopener noreferrer">Cosmic
+                    Labyrinth</a></li>
+                <li>Political Hope podcast producer</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -873,6 +1258,32 @@
 
         <div class="heart-donate actions">
           <a class="pill yellow" target="_blank" href="https://buy.stripe.com/14AbJ1foE5G7gCH9whcV200">Donate to the campaign</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="events">
+      <div class="wrap">
+        <div class="events-cta-card">
+          <div class="events-cta-copy">
+            <div class="kicker">Campaign calendar</div>
+            <h2>Campaign Events</h2>
+            <p>Heartstorming gatherings, community meetings, and other Ward 7 dates — all in one place. Times shown in
+              Pacific time.</p>
+          </div>
+          <button type="button" class="events-open-btn" id="openCalendarBtn" aria-haspopup="dialog">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path fill="#1976D2"
+                d="M43 11v29a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V11h38z" />
+              <path fill="#E3F2FD" d="M5 11V8a3 3 0 0 1 3-3h32a3 3 0 0 1 3 3v3H5z" />
+              <path fill="#1565C0" d="M14 5h4v6h-4V5zm16 0h4v6h-4V5z" />
+              <path fill="#fff" d="M14 22h6v6h-6v-6zm10 0h6v6h-6v-6zm-10 10h6v6h-6v-6zm10 0h6v6h-6v-6z" />
+              <path fill="#FBBC04" d="M28 22h6v6h-6v-6z" />
+              <path fill="#34A853" d="M28 32h6v6h-6v-6z" />
+              <path fill="#EA4335" d="M14 32h6v6h-6v-6z" />
+            </svg>
+            Open campaign calendar
+          </button>
         </div>
       </div>
     </section>
@@ -915,7 +1326,17 @@
         <h2>Help shape Ward 7’s next decade.</h2>
         <p>Vote. Volunteer. Share a park story. Come to a Heartstorming event. Help turn a long-horizon vision into
           practical work.</p>
-        <div class="actions" style="justify-content:center"><a class="pill yellow" target="_blank"
+        <div class="actions" style="justify-content:center"><button type="button" class="pill yellow events-pill"
+            id="openCalendarBtnJoin" aria-haspopup="dialog"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path fill="#1976D2" d="M43 11v29a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V11h38z" />
+              <path fill="#E3F2FD" d="M5 11V8a3 3 0 0 1 3-3h32a3 3 0 0 1 3 3v3H5z" />
+              <path fill="#1565C0" d="M14 5h4v6h-4V5zm16 0h4v6h-4V5z" />
+              <path fill="#fff" d="M14 22h6v6h-6v-6zm10 0h6v6h-6v-6zm-10 10h6v6h-6v-6zm10 0h6v6h-6v-6z" />
+              <path fill="#FBBC04" d="M28 22h6v6h-6v-6z" />
+              <path fill="#34A853" d="M28 32h6v6h-6v-6z" />
+              <path fill="#EA4335" d="M14 32h6v6h-6v-6z" />
+            </svg>Campaign Events</button><a class="pill yellow" target="_blank"
             href="https://docs.google.com/forms/d/e/1FAIpQLSc652ppcEPhFyMtQTiuM40sYXw9dLmoml_qmxxMss7rlWrHFg/viewform?usp=send_form">Volunteer</a><a
             class="pill ghost" target="_blank" href="https://pol.is/3atnwrjzcn">Share your park story</a></div>
       </div>
@@ -933,6 +1354,111 @@
         Connect · Deliver.</div>
     </div>
   </footer>
+
+  <div class="video-modal calendar-modal" id="calendarModal" hidden role="dialog" aria-modal="true"
+    aria-label="Campaign events calendar">
+    <div class="video-modal-backdrop" data-calendar-close></div>
+    <div class="video-modal-panel">
+      <button type="button" class="video-modal-close" data-calendar-close aria-label="Close calendar">&times;</button>
+      <div class="video-modal-frame">
+        <iframe id="calendarModalIframe" title="Indy Sekhon campaign Google Calendar"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p class="calendar-modal-note">Prefer the full Google Calendar app? <a
+          href="https://calendar.google.com/calendar/u/0/r?cid=indyebrpd2026%40gmail.com" target="_blank"
+          rel="noopener noreferrer">Open or subscribe in Google Calendar</a>.</p>
+    </div>
+  </div>
+
+  <div class="video-modal" id="videoModal" hidden role="dialog" aria-modal="true" aria-label="Video player">
+    <div class="video-modal-backdrop" data-video-close></div>
+    <div class="video-modal-panel">
+      <button type="button" class="video-modal-close" data-video-close aria-label="Close video">&times;</button>
+      <div class="video-modal-frame">
+        <iframe id="videoModalIframe" title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var CALENDAR_EMBED =
+        'https://calendar.google.com/calendar/embed?src=indyebrpd2026%40gmail.com&ctz=America%2FLos_Angeles&mode=AGENDA';
+
+      function syncBodyScroll() {
+        var videoModal = document.getElementById('videoModal');
+        var calendarModal = document.getElementById('calendarModal');
+        var open = (videoModal && !videoModal.hidden) || (calendarModal && !calendarModal.hidden);
+        document.body.style.overflow = open ? 'hidden' : '';
+      }
+
+      var videoModal = document.getElementById('videoModal');
+      var videoIframe = document.getElementById('videoModalIframe');
+      if (videoModal && videoIframe) {
+        function openVideo(id) {
+          videoIframe.src = 'https://www.youtube.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0';
+          videoModal.hidden = false;
+          syncBodyScroll();
+          videoModal.querySelector('.video-modal-close').focus();
+        }
+
+        function closeVideo() {
+          videoModal.hidden = true;
+          videoIframe.src = '';
+          syncBodyScroll();
+        }
+
+        document.querySelectorAll('.video-thumb[data-youtube]').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            openVideo(btn.getAttribute('data-youtube'));
+          });
+        });
+
+        videoModal.querySelectorAll('[data-video-close]').forEach(function (el) {
+          el.addEventListener('click', closeVideo);
+        });
+      }
+
+      var calendarModal = document.getElementById('calendarModal');
+      var calendarIframe = document.getElementById('calendarModalIframe');
+
+      function openCalendar() {
+        if (!calendarModal || !calendarIframe) return;
+        calendarIframe.src = CALENDAR_EMBED;
+        calendarModal.hidden = false;
+        syncBodyScroll();
+        calendarModal.querySelector('.video-modal-close').focus();
+      }
+
+      function closeCalendar() {
+        if (!calendarModal || !calendarIframe) return;
+        calendarModal.hidden = true;
+        calendarIframe.src = '';
+        syncBodyScroll();
+      }
+
+      if (calendarModal) {
+        document.querySelectorAll('#openCalendarBtn, #openCalendarBtnJoin').forEach(function (btn) {
+          btn.addEventListener('click', openCalendar);
+        });
+        calendarModal.querySelectorAll('[data-calendar-close]').forEach(function (el) {
+          el.addEventListener('click', closeCalendar);
+        });
+      }
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Escape') return;
+        if (calendarModal && !calendarModal.hidden) closeCalendar();
+        else if (videoModal && !videoModal.hidden) {
+          videoModal.hidden = true;
+          if (videoIframe) videoIframe.src = '';
+          syncBodyScroll();
+        }
+      });
+    })();
+  </script>
 </body>
 
 </html>
